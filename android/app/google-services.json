@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "82836334247",
+    "project_id": "flutter-met-evo1",
+    "storage_bucket": "flutter-met-evo1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82836334247:android:11d1617bb94ddab87c5d82",
+        "android_client_info": {
+          "package_name": "com.flutterflow.fluttermetevo1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82836334247-0oe1todqlmc8je11qc808ec8l7h1ln0a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuQiU3cNm7zaLvAGRuRbM0W4z1O3wxma0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82836334247-0oe1todqlmc8je11qc808ec8l7h1ln0a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
