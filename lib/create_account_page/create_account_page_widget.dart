@@ -1,4 +1,5 @@
 import '../auth/auth_util.dart';
+import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -201,7 +202,7 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget> {
                                   padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      final user = await signInWithEmail(
+                                      final user = await createAccountWithEmail(
                                         context,
                                         emailTextController.text,
                                         passwordTextController.text,
@@ -209,6 +210,17 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget> {
                                       if (user == null) {
                                         return;
                                       }
+
+                                      final email = emailTextController.text;
+
+                                      final usersRecordData =
+                                          createUsersRecordData(
+                                        email: email,
+                                      );
+
+                                      await UsersRecord.collection
+                                          .doc(user.uid)
+                                          .update(usersRecordData);
 
                                       await Navigator.pushAndRemoveUntil(
                                         context,
